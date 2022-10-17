@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute();
-const { id }  = route.query;
+const { id }  = route.params;
 //旧実装
 // const { article, fetchArticle } = useArticles();
 // fetchArticle(+id);

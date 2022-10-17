@@ -12,7 +12,7 @@ const { data: articles, refresh } = useFetch('/api/blogs');
     <p>新着記事！！</p>
     <ul>
       <li v-for="article in articles" :key="article.id">
-        <NuxtLink :to="{path: '/details', query: { id: article.id }}">{{
+        <NuxtLink :to="{path: `/details/${article.id}`}">{{
             article.title
           }}
         </NuxtLink>
