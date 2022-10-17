@@ -23,7 +23,7 @@ const demoArticles = [
 export function useArticles() {
   const articles = ref<Article[]>([]);
   const article = ref<Article | null>(null);
-  
+
   // 将来的にはAPIアクセス
   const fetchArticles = (): void => {
     articles.value = demoArticles;

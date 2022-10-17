@@ -9,7 +9,7 @@
       </footer>
     </div>
   </template>
-  
+
   <style scoped>
   header {
     border-bottom-style: solid;

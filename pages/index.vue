@@ -1,6 +1,10 @@
 <script setup lang="ts">
-const { fetchArticles, articles } = useArticles();
-fetchArticles();
+// 旧実装
+// const { fetchArticles, articles } = useArticles();
+// fetchArticles();
+
+// userFetch($fetch)利用
+const { data: articles, refresh } = useFetch('/api/blogs');
 </script>
 
 <template>
@@ -15,6 +19,8 @@ fetchArticles();
       </li>
     </ul>
 
+    <!-- データ更新処理 -->
+    <button @click="refresh">最新情報取得</button>
     <Advertisement />
   </div>
 </template>

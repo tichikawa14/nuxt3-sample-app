@@ -1,8 +1,12 @@
 <script setup lang="ts">
 const route = useRoute();
-const {id}  = route.query;
-const { article, fetchArticle } = useArticles();
-fetchArticle(+id);
+const { id }  = route.query;
+//旧実装
+// const { article, fetchArticle } = useArticles();
+// fetchArticle(+id);
+
+// useFetch($fetch)利用
+const { data: article } = useFetch(`/api/blogs/${id}`);
 </script>
 
 <template>
